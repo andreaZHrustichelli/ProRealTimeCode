@@ -1,0 +1,21 @@
+DEFPARAM CumulateOrders = False
+
+//Condizione per aprire una posizione LONG sul mercato
+IF NOT LongOnMarket AND condizione THEN
+  BUY 1 CONTRACTS AT MARKET
+ENDIF
+
+//Condizione per chiudere una posizione LONG sul mercato
+IF LongOnMarket AND condizione THEN
+  SELL AT MARKET
+ENDIF
+
+//Condiione per aprire una posizione SHORT sul mercato
+IF NOT ShortOnMarket AND condizione THEN
+  SELLSHORT 1 CONTRACTS AT MARKET
+ENDIF
+
+//Condizione per chiudere una posizione SHORT sul mercato
+IF ShortOnMarket AND condizione THEN
+  EXITSHORT AT MARKET
+ENDIF
